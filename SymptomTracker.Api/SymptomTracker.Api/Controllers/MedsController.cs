@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using SymptomTracker.DataAccess;
 using SymptomTracker.Domain;
 
 namespace SymptomTracker.Api.Controllers
@@ -14,50 +15,31 @@ namespace SymptomTracker.Api.Controllers
         // GET api/meds
         public IEnumerable<Med> Get()
         {
-            List<Med> list = new List<Med>();
-
-            using (
-                IDataReader reader = SymptomTracker.DataAccess.DatabaseAccessor.Instance.ExecuteReader(
-                    CommandType.Text, "select * from st_meds"))
-            {
-                while (reader.Read())
-                {
-                    list.Add(MedMapper.Map(reader));
-                }
-            }
-
-            return list;
+            return MedDataAccessor.Get();
         }
 
         // GET api/values/5
         public Med Get(int id)
         {
-            using (
-                IDataReader reader = SymptomTracker.DataAccess.DatabaseAccessor.Instance.ExecuteReader(
-                    CommandType.Text, "select * from st_meds where medid = " + id))
-            {
-                while (reader.Read())
-                {
-                    return MedMapper.Map(reader);
-                }
-            }
-
-            return null;
+            return MedDataAccessor.Get(id);
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Med value)
         {
+            MedDataAccessor.Insert(value);
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Med value)
         {
+            MedDataAccessor.Update(id, value);
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
+            MedDataAccessor.Delete(id);
         }
     }
 }
