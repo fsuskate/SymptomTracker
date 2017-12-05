@@ -18,6 +18,7 @@ namespace SymptomTracker.Domain
             med.Dose = reader.GetInt64(3);
             med.DoseDate = reader.GetDateTime(4);
             med.UserId = reader.GetInt32(5);
+            med.MedImage = reader.GetString(6);
             return med;
         }
     }

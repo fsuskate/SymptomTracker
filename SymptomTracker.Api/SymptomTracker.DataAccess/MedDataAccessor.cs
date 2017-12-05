@@ -12,7 +12,15 @@ namespace SymptomTracker.DataAccess
 
             using (
                 IDataReader reader = DatabaseAccessor.Instance.ExecuteReader(
-                    CommandType.Text, "select * from st_meds"))
+                    CommandType.Text, @"
+                    SELECT [MedId]
+                      ,[MedName]
+                      ,[Description]
+                      ,[Dose]
+                      ,[DoseDate]
+                      ,[UserId]
+                      ,[MedImage]
+                    FROM [SymptomTracker].[dbo].[ST_Meds]"))
             {
                 while (reader.Read())
                 {
@@ -27,7 +35,15 @@ namespace SymptomTracker.DataAccess
         {
             using (
                 IDataReader reader = DatabaseAccessor.Instance.ExecuteReader(
-                    CommandType.Text, "select * from st_meds where medid = " + id))
+                    CommandType.Text, @"
+                    SELECT [MedId]
+                      ,[MedName]
+                      ,[Description]
+                      ,[Dose]
+                      ,[DoseDate]
+                      ,[UserId]
+                      ,[MedImage]
+                    FROM [SymptomTracker].[dbo].[ST_Meds] where medid = " + id))
             {
                 while (reader.Read())
                 {

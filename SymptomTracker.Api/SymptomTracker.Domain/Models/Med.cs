@@ -13,5 +13,6 @@ namespace SymptomTracker.Domain
         public long Dose { get; set; }
         public DateTime DoseDate { get; set; }
         public int UserId { get; set; }
+        public string MedImage { get; set; }
     }
 }

@@ -1,0 +1,25 @@
+<h1>
+  Medications
+</h1>
+
+<table class="table table-dark table-hover">
+  <tr>
+    <th>#</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th class="col-md-2">Description</th>
+    <th>Dose</th>
+    <th>Date</th>
+    <th>UserId</th>
+  </tr>
+
+  <tr *ngFor="let med of meds">
+    <td>{{med.MedId}}</td>
+    <td><img src='../../assets/{{med.MedImage}}' width="25"></td>
+    <td>{{med.MedName}}</td>
+    <td>{{med.Description}}</td>
+    <td>{{med.Dose}}</td>
+    <td>{{med.DoseDate}}</td>
+    <td>{{med.UserId}}</td>
+  </tr>
+</table>

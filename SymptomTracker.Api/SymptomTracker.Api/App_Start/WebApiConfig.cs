@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web.Http;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
+using System.Web.Http.Cors;
 
 namespace SymptomTracker.Api
 {
@@ -16,6 +17,9 @@ namespace SymptomTracker.Api
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

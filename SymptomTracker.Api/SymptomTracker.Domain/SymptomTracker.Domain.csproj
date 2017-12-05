@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mappers\MedMapper.cs" />
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\Symptom.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Med.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
