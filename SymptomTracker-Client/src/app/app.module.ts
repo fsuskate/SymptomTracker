@@ -6,11 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SgMedsComponent } from './component/sg-meds.component';
+import { SgSymptomsComponent } from './component/sg-symptoms.component';
+import { SgSymptomsService } from './service/sg-symptoms.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SgMedsComponent,
+    SgSymptomsComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,7 @@ import { SgMedsComponent } from './component/sg-meds.component';
     HttpModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SgSymptomsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

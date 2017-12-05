@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseAccessor.cs" />
+    <Compile Include="ActivityDataAccessor.cs" />
+    <Compile Include="SymptomDataAccessor.cs" />
+    <Compile Include="UserDataAccessor.cs" />
     <Compile Include="MedDataAccessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

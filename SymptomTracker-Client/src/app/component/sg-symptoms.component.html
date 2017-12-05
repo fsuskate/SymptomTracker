@@ -1,0 +1,27 @@
+<h1>
+  Symptoms
+</h1>
+
+<table class="table table-dark table-hover">
+  <tr>
+    <th>#</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th class="col-md-2">Description</th>
+    <th>Level</th>
+    <th>Length</th>
+    <th>Date</th>
+    <th>UserId</th>
+  </tr>
+
+  <tr *ngFor="let symptom of symptoms">
+    <td>{{symptom.SymptomId}}</td>
+    <td><img src='../../assets/{{symptom.SymptomImage}}' width="25"></td>
+    <td>{{symptom.SymptomName}}</td>
+    <td>{{symptom.Description}}</td>
+    <td>{{symptom.SymptomLevel}}</td>    
+    <td>{{symptom.SymptomLength}}</td>
+    <td>{{symptom.SymptomDate}}</td>
+    <td>{{symptom.UserId}}</td>
+  </tr>
+</table>

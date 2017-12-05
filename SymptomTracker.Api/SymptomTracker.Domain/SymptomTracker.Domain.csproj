@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappers\UserMapper.cs" />
+    <Compile Include="Mappers\SymptomMapper.cs" />
+    <Compile Include="Mappers\ActivityMapper.cs" />
     <Compile Include="Mappers\MedMapper.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Symptom.cs" />

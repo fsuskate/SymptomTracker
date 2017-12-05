@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Med } from '../model/med';
 import { SgMedsService } from '../service/sg-meds.service';
-
+import { Med } from '../model/med';
 
 @Component({
   selector: 'sg-meds',
@@ -13,13 +12,13 @@ export class SgMedsComponent implements OnInit {
 
   meds: Med[];
   
-    constructor(private medsService: SgMedsService) { }
-  
-    ngOnInit() {
-      this.medsService
-        .getMeds()
-        .subscribe(data => {
-          this.meds = data;
-        });
-    }
+  constructor(private medsService: SgMedsService) { }
+
+  ngOnInit() {
+    this.medsService
+      .getMeds()
+      .subscribe(data => {
+        this.meds = data;
+      });
+  }
 }
