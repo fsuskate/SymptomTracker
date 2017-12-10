@@ -1,0 +1,17 @@
+<h1>
+  Users
+</h1>
+
+<table class="table table-dark table-hover">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>PassToken</th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{user.UserId}}</td>
+    <td>{{user.UserName}}</td>
+    <td>{{user.PassToken}}</td>
+  </tr>
+</table>

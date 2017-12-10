@@ -1,0 +1,23 @@
+<h1>
+  Activities
+</h1>
+
+<table class="table table-dark table-hover">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th class="col-md-2">Description</th>
+    <th>Length</th>
+    <th>Date</th>
+    <th>UserId</th>
+  </tr>
+
+  <tr *ngFor="let activity of activities">
+    <td>{{activity.ActivityId}}</td>
+    <td>{{activity.ActivityName}}</td>
+    <td>{{activity.Description}}</td>
+    <td>{{activity.ActivityLength}}</td>
+    <td>{{activity.ActivityDate}}</td>
+    <td>{{activity.UserId}}</td>
+  </tr>
+</table>

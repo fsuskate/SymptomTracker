@@ -11,8 +11,8 @@ namespace SymptomTracker.Domain
                 ActivityId = reader.GetInt64(0),
                 ActivityName = reader.GetString(1),
                 Description = reader.GetString(2),
-                ActivityLength = reader.GetInt64(3),
-                ActivityDate = reader.GetDateTime(4),
+                ActivityDate = reader.GetDateTime(3),
+                ActivityLength = reader.GetInt64(4),
                 UserId = reader.GetInt32(5),
             };
         }
